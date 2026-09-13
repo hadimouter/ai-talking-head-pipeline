@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Shellcheck
+        run: shellcheck generate-hedra-video.sh setup.sh
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # public/input-video.mp4 is never committed (it's the user's own
+      # generated/personal footage) — synthesize a throwaway placeholder
+      # clip matching the composition's duration purely so the lint step
+      # below can check the timeline, GSAP calls, and card markup without
+      # needing real media.
+      - name: Generate placeholder input video for lint
+        run: |
+          ffmpeg -y -f lavfi -i color=c=black:s=1080x1350:d=47:r=25 \
+                 -f lavfi -i anullsrc=r=44100:cl=stereo \
+                 -c:v libx264 -pix_fmt yuv420p -c:a aac -shortest \
+                 public/input-video.mp4
+
+      - name: Lint HyperFrames composition
+        run: npx hyperframes check public

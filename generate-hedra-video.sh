@@ -43,7 +43,7 @@ for f in "$IMAGE_FILE" "$AUDIO_FILE"; do
 done
 
 echo "== Uploading image ==" >&2
-IMAGE_URL=$(curl -sS -X POST "$API_BASE/files" \
+IMAGE_URL=$(curl -sS --connect-timeout 10 --max-time 120 -X POST "$API_BASE/files" \
   -H "Authorization: Bearer $HEDRA_API_KEY" \
   -F "file=@$IMAGE_FILE" | jq -r '.url')
 
@@ -53,7 +53,7 @@ if [ -z "$IMAGE_URL" ] || [ "$IMAGE_URL" = "null" ]; then
 fi
 
 echo "== Uploading audio ==" >&2
-AUDIO_URL=$(curl -sS -X POST "$API_BASE/files" \
+AUDIO_URL=$(curl -sS --connect-timeout 10 --max-time 120 -X POST "$API_BASE/files" \
   -H "Authorization: Bearer $HEDRA_API_KEY" \
   -F "file=@$AUDIO_FILE" | jq -r '.url')
 
@@ -66,7 +66,7 @@ fi
 # generation call below must happen well within that window.
 
 echo "== Requesting generation ($MODEL, $RESOLUTION, $ASPECT_RATIO) ==" >&2
-GEN_RESPONSE=$(curl -sS -X POST "$API_BASE/models/$MODEL" \
+GEN_RESPONSE=$(curl -sS --connect-timeout 10 --max-time 30 -X POST "$API_BASE/models/$MODEL" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $HEDRA_API_KEY" \
   -d "{
@@ -87,7 +87,7 @@ fi
 
 echo "== Waiting for job $JOB_ID ==" >&2
 while true; do
-  STATUS_RESPONSE=$(curl -sS "$API_BASE/jobs/$JOB_ID/status" \
+  STATUS_RESPONSE=$(curl -sS --connect-timeout 10 --max-time 15 "$API_BASE/jobs/$JOB_ID/status" \
     -H "Authorization: Bearer $HEDRA_API_KEY")
   STATE=$(echo "$STATUS_RESPONSE" | jq -r '.job.status // .status // empty')
   echo "status: $STATE" >&2
@@ -109,5 +109,5 @@ if [ -z "$VIDEO_URL" ]; then
 fi
 
 echo "== Downloading result ==" >&2
-curl -sS "$VIDEO_URL" -o "$OUT_FILE"
+curl -sS --connect-timeout 10 --max-time 300 "$VIDEO_URL" -o "$OUT_FILE"
 echo "Saved: $OUT_FILE" >&2
