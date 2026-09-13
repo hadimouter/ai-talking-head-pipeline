@@ -18,6 +18,13 @@ ASPECT_RATIO="${HEDRA_ASPECT_RATIO:-3:4}"
 RESOLUTION="${HEDRA_RESOLUTION:-720p}"
 PROMPT="${HEDRA_PROMPT:-A person speaking naturally and directly to the camera, calm expression, talking-head podcast style, subtle head movement.}"
 
+for bin in curl jq; do
+  if ! command -v "$bin" >/dev/null 2>&1; then
+    echo "'$bin' is required but not installed." >&2
+    exit 1
+  fi
+done
+
 if [ -z "${HEDRA_API_KEY:-}" ]; then
   echo "HEDRA_API_KEY is not set. Run: export HEDRA_API_KEY=\"...\"" >&2
   exit 1
