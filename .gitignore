@@ -1,0 +1,5 @@
+.env
+.DS_Store
+node_modules/
+FORK_REPORT.md
+SANITIZATION_REPORT.md

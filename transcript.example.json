@@ -1,0 +1,787 @@
+[
+  {
+    "text": "Aujourd'hui,",
+    "start": 0.34,
+    "end": 0.84
+  },
+  {
+    "text": "je",
+    "start": 0.84,
+    "end": 0.88
+  },
+  {
+    "text": "t'explique",
+    "start": 0.98,
+    "end": 1.61
+  },
+  {
+    "text": "le",
+    "start": 1.61,
+    "end": 1.74
+  },
+  {
+    "text": "SSO,",
+    "start": 1.74,
+    "end": 2.05
+  },
+  {
+    "text": "genre",
+    "start": 2.31,
+    "end": 2.47
+  },
+  {
+    "text": "vraiment,",
+    "start": 2.47,
+    "end": 3.07
+  },
+  {
+    "text": "comment",
+    "start": 3.1,
+    "end": 3.33
+  },
+  {
+    "text": "ça",
+    "start": 3.35,
+    "end": 3.42
+  },
+  {
+    "text": "marche",
+    "start": 3.42,
+    "end": 3.66
+  },
+  {
+    "text": "derrière,",
+    "start": 3.66,
+    "end": 4.06
+  },
+  {
+    "text": "quand",
+    "start": 4.45,
+    "end": 4.5
+  },
+  {
+    "text": "tu",
+    "start": 4.5,
+    "end": 4.62
+  },
+  {
+    "text": "te",
+    "start": 4.62,
+    "end": 4.64
+  },
+  {
+    "text": "connectes",
+    "start": 4.73,
+    "end": 5
+  },
+  {
+    "text": "à",
+    "start": 5.02,
+    "end": 5.05
+  },
+  {
+    "text": "une",
+    "start": 5.05,
+    "end": 5.2
+  },
+  {
+    "text": "appli",
+    "start": 5.2,
+    "end": 5.53
+  },
+  {
+    "text": "sans",
+    "start": 5.82,
+    "end": 5.85
+  },
+  {
+    "text": "remettre",
+    "start": 5.85,
+    "end": 6.18
+  },
+  {
+    "text": "ton",
+    "start": 6.3,
+    "end": 6.31
+  },
+  {
+    "text": "mot",
+    "start": 6.31,
+    "end": 6.42
+  },
+  {
+    "text": "de",
+    "start": 6.42,
+    "end": 6.46
+  },
+  {
+    "text": "passe.",
+    "start": 6.58,
+    "end": 6.85
+  },
+  {
+    "text": "Bon,",
+    "start": 7.32,
+    "end": 7.53
+  },
+  {
+    "text": "en",
+    "start": 7.53,
+    "end": 7.73
+  },
+  {
+    "text": "gros,",
+    "start": 7.73,
+    "end": 8.21
+  },
+  {
+    "text": "ton",
+    "start": 8.51,
+    "end": 8.54
+  },
+  {
+    "text": "application,",
+    "start": 8.54,
+    "end": 9.06
+  },
+  {
+    "text": "elle",
+    "start": 9.31,
+    "end": 9.34
+  },
+  {
+    "text": "arrête",
+    "start": 9.34,
+    "end": 9.62
+  },
+  {
+    "text": "de",
+    "start": 9.62,
+    "end": 9.71
+  },
+  {
+    "text": "gérer",
+    "start": 9.71,
+    "end": 9.79
+  },
+  {
+    "text": "le",
+    "start": 9.79,
+    "end": 10.1
+  },
+  {
+    "text": "mot",
+    "start": 10.1,
+    "end": 10.17
+  },
+  {
+    "text": "de",
+    "start": 10.17,
+    "end": 10.26
+  },
+  {
+    "text": "passe",
+    "start": 10.26,
+    "end": 10.5
+  },
+  {
+    "text": "elle-même,",
+    "start": 10.5,
+    "end": 11.02
+  },
+  {
+    "text": "elle",
+    "start": 11.02,
+    "end": 11.43
+  },
+  {
+    "text": "t'envoie",
+    "start": 11.43,
+    "end": 11.85
+  },
+  {
+    "text": "chez",
+    "start": 11.85,
+    "end": 12.1
+  },
+  {
+    "text": "un",
+    "start": 12.1,
+    "end": 12.23
+  },
+  {
+    "text": "Identity",
+    "start": 12.23,
+    "end": 12.74
+  },
+  {
+    "text": "Provider",
+    "start": 12.83,
+    "end": 13.18
+  },
+  {
+    "text": "Key",
+    "start": 13.3,
+    "end": 13.43
+  },
+  {
+    "text": "Clock",
+    "start": 13.43,
+    "end": 13.74
+  },
+  {
+    "text": "par",
+    "start": 13.74,
+    "end": 13.85
+  },
+  {
+    "text": "exemple,",
+    "start": 14.49,
+    "end": 14.6
+  },
+  {
+    "text": "et",
+    "start": 14.6,
+    "end": 14.64
+  },
+  {
+    "text": "c'est",
+    "start": 14.75,
+    "end": 14.96
+  },
+  {
+    "text": "lui",
+    "start": 14.96,
+    "end": 15.12
+  },
+  {
+    "text": "qui",
+    "start": 15.12,
+    "end": 15.27
+  },
+  {
+    "text": "te",
+    "start": 15.27,
+    "end": 15.73
+  },
+  {
+    "text": "connecte.",
+    "start": 15.73,
+    "end": 15.99
+  },
+  {
+    "text": "Une",
+    "start": 16.04,
+    "end": 16.2
+  },
+  {
+    "text": "fois",
+    "start": 16.34,
+    "end": 16.47
+  },
+  {
+    "text": "que",
+    "start": 16.47,
+    "end": 16.67
+  },
+  {
+    "text": "tu",
+    "start": 16.67,
+    "end": 16.79
+  },
+  {
+    "text": "es",
+    "start": 16.79,
+    "end": 16.88
+  },
+  {
+    "text": "authentifié,",
+    "start": 16.97,
+    "end": 17.8
+  },
+  {
+    "text": "il",
+    "start": 17.8,
+    "end": 17.92
+  },
+  {
+    "text": "renvoie",
+    "start": 17.92,
+    "end": 18.39
+  },
+  {
+    "text": "un",
+    "start": 18.39,
+    "end": 18.51
+  },
+  {
+    "text": "code",
+    "start": 18.51,
+    "end": 18.78
+  },
+  {
+    "text": "à",
+    "start": 18.78,
+    "end": 18.8
+  },
+  {
+    "text": "l'application,",
+    "start": 18.91,
+    "end": 19.99
+  },
+  {
+    "text": "l'application",
+    "start": 19.99,
+    "end": 20.6
+  },
+  {
+    "text": "échange",
+    "start": 20.6,
+    "end": 20.92
+  },
+  {
+    "text": "ce",
+    "start": 20.92,
+    "end": 21.02
+  },
+  {
+    "text": "code",
+    "start": 21.02,
+    "end": 21.21
+  },
+  {
+    "text": "contre",
+    "start": 21.21,
+    "end": 21.49
+  },
+  {
+    "text": "des",
+    "start": 21.49,
+    "end": 21.54
+  },
+  {
+    "text": "tokens,",
+    "start": 21.83,
+    "end": 22.15
+  },
+  {
+    "text": "et",
+    "start": 22.15,
+    "end": 22.18
+  },
+  {
+    "text": "hop,",
+    "start": 22.3,
+    "end": 22.65
+  },
+  {
+    "text": "elle",
+    "start": 22.67,
+    "end": 22.85
+  },
+  {
+    "text": "crée",
+    "start": 22.98,
+    "end": 23.28
+  },
+  {
+    "text": "ta",
+    "start": 23.28,
+    "end": 23.5
+  },
+  {
+    "text": "session.",
+    "start": 23.5,
+    "end": 24
+  },
+  {
+    "text": "Et",
+    "start": 24.04,
+    "end": 24.13
+  },
+  {
+    "text": "le",
+    "start": 24.13,
+    "end": 24.34
+  },
+  {
+    "text": "truc",
+    "start": 24.34,
+    "end": 24.52
+  },
+  {
+    "text": "que",
+    "start": 24.52,
+    "end": 24.68
+  },
+  {
+    "text": "personne",
+    "start": 24.72,
+    "end": 25.19
+  },
+  {
+    "text": "dit,",
+    "start": 25.42,
+    "end": 25.55
+  },
+  {
+    "text": "si",
+    "start": 25.55,
+    "end": 25.68
+  },
+  {
+    "text": "tu",
+    "start": 25.68,
+    "end": 25.81
+  },
+  {
+    "text": "fermes",
+    "start": 25.81,
+    "end": 26.2
+  },
+  {
+    "text": "juste",
+    "start": 26.31,
+    "end": 26.53
+  },
+  {
+    "text": "la",
+    "start": 26.53,
+    "end": 26.66
+  },
+  {
+    "text": "session",
+    "start": 26.66,
+    "end": 27.12
+  },
+  {
+    "text": "de",
+    "start": 27.12,
+    "end": 27.25
+  },
+  {
+    "text": "ton",
+    "start": 27.25,
+    "end": 27.44
+  },
+  {
+    "text": "appli",
+    "start": 27.44,
+    "end": 27.76
+  },
+  {
+    "text": "et",
+    "start": 27.76,
+    "end": 27.9
+  },
+  {
+    "text": "que",
+    "start": 27.9,
+    "end": 28.02
+  },
+  {
+    "text": "tu",
+    "start": 28.07,
+    "end": 28.1
+  },
+  {
+    "text": "te",
+    "start": 28.23,
+    "end": 28.35
+  },
+  {
+    "text": "reconnectes",
+    "start": 28.47,
+    "end": 29.07
+  },
+  {
+    "text": "direct,",
+    "start": 29.07,
+    "end": 29.54
+  },
+  {
+    "text": "ça",
+    "start": 29.54,
+    "end": 29.82
+  },
+  {
+    "text": "ne",
+    "start": 29.82,
+    "end": 29.85
+  },
+  {
+    "text": "va",
+    "start": 29.85,
+    "end": 29.98
+  },
+  {
+    "text": "pas",
+    "start": 29.98,
+    "end": 30.17
+  },
+  {
+    "text": "te",
+    "start": 30.17,
+    "end": 30.18
+  },
+  {
+    "text": "demander",
+    "start": 30.29,
+    "end": 30.78
+  },
+  {
+    "text": "ton",
+    "start": 30.78,
+    "end": 30.85
+  },
+  {
+    "text": "mot",
+    "start": 31.02,
+    "end": 31.19
+  },
+  {
+    "text": "de",
+    "start": 31.22,
+    "end": 31.33
+  },
+  {
+    "text": "passe.",
+    "start": 31.49,
+    "end": 32
+  },
+  {
+    "text": "Normal,",
+    "start": 32.34,
+    "end": 32.48
+  },
+  {
+    "text": "la",
+    "start": 32.48,
+    "end": 32.6
+  },
+  {
+    "text": "session",
+    "start": 32.6,
+    "end": 33.03
+  },
+  {
+    "text": "chez",
+    "start": 33.03,
+    "end": 33.2
+  },
+  {
+    "text": "l'identity",
+    "start": 33.27,
+    "end": 33.86
+  },
+  {
+    "text": "provider,",
+    "start": 33.86,
+    "end": 34.48
+  },
+  {
+    "text": "elle",
+    "start": 34.48,
+    "end": 34.72
+  },
+  {
+    "text": "est",
+    "start": 34.72,
+    "end": 34.79
+  },
+  {
+    "text": "toujours",
+    "start": 35.1,
+    "end": 35.39
+  },
+  {
+    "text": "active.",
+    "start": 35.39,
+    "end": 35.99
+  },
+  {
+    "text": "Donc",
+    "start": 36.05,
+    "end": 36.23
+  },
+  {
+    "text": "voilà,",
+    "start": 36.34,
+    "end": 36.63
+  },
+  {
+    "text": "le",
+    "start": 36.63,
+    "end": 36.73
+  },
+  {
+    "text": "SSO,",
+    "start": 36.74,
+    "end": 37.01
+  },
+  {
+    "text": "ce",
+    "start": 37.01,
+    "end": 37.07
+  },
+  {
+    "text": "n'est",
+    "start": 37.13,
+    "end": 37.31
+  },
+  {
+    "text": "pas",
+    "start": 37.51,
+    "end": 37.57
+  },
+  {
+    "text": "un",
+    "start": 37.57,
+    "end": 37.68
+  },
+  {
+    "text": "cookie",
+    "start": 37.68,
+    "end": 38.02
+  },
+  {
+    "text": "magique",
+    "start": 38.02,
+    "end": 38.43
+  },
+  {
+    "text": "partagé",
+    "start": 38.43,
+    "end": 38.79
+  },
+  {
+    "text": "entre",
+    "start": 39.1,
+    "end": 39.11
+  },
+  {
+    "text": "tes",
+    "start": 39.11,
+    "end": 39.28
+  },
+  {
+    "text": "applis.",
+    "start": 39.28,
+    "end": 39.99
+  },
+  {
+    "text": "C'est",
+    "start": 40.04,
+    "end": 40.28
+  },
+  {
+    "text": "une",
+    "start": 40.34,
+    "end": 40.45
+  },
+  {
+    "text": "seule",
+    "start": 40.45,
+    "end": 40.73
+  },
+  {
+    "text": "session",
+    "start": 40.73,
+    "end": 41.14
+  },
+  {
+    "text": "chez",
+    "start": 41.14,
+    "end": 41.2
+  },
+  {
+    "text": "ton",
+    "start": 41.51,
+    "end": 41.55
+  },
+  {
+    "text": "Identity",
+    "start": 41.55,
+    "end": 42.01
+  },
+  {
+    "text": "Provider",
+    "start": 42.01,
+    "end": 42.47
+  },
+  {
+    "text": "que",
+    "start": 42.47,
+    "end": 42.64
+  },
+  {
+    "text": "tout",
+    "start": 42.64,
+    "end": 42.79
+  },
+  {
+    "text": "le",
+    "start": 42.87,
+    "end": 42.88
+  },
+  {
+    "text": "monde",
+    "start": 43.1,
+    "end": 43.27
+  },
+  {
+    "text": "utilise.",
+    "start": 43.27,
+    "end": 43.99
+  },
+  {
+    "text": "Si",
+    "start": 44.04,
+    "end": 44.13
+  },
+  {
+    "text": "tu",
+    "start": 44.13,
+    "end": 44.34
+  },
+  {
+    "text": "veux",
+    "start": 44.34,
+    "end": 44.52
+  },
+  {
+    "text": "le",
+    "start": 44.52,
+    "end": 44.64
+  },
+  {
+    "text": "détail",
+    "start": 44.64,
+    "end": 45.04
+  },
+  {
+    "text": "complet,",
+    "start": 45.04,
+    "end": 45.62
+  },
+  {
+    "text": "l'article",
+    "start": 45.62,
+    "end": 46.05
+  },
+  {
+    "text": "est",
+    "start": 46.31,
+    "end": 46.37
+  },
+  {
+    "text": "en",
+    "start": 46.38,
+    "end": 46.51
+  },
+  {
+    "text": "lien.",
+    "start": 46.51,
+    "end": 46.8
+  }
+]
