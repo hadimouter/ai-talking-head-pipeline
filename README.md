@@ -41,6 +41,23 @@ export HEDRA_API_KEY="your-api-key-here"
 
 This uploads the image and audio to Hedra, requests a Character-3 generation, polls until it completes, and downloads the result. Useful env vars: `HEDRA_MODEL`, `HEDRA_ASPECT_RATIO`, `HEDRA_RESOLUTION`, `HEDRA_PROMPT` (see the script for defaults). Check Hedra's model schema for allowed values; `aspect_ratio` does **not** include `4:5`, the closest supported portrait ratio is `3:4`.
 
+#### Don't want to record your voice?
+
+`generate-speech.sh` turns a text file into an audio track plus a word-level transcript, using HeyGen's text-to-speech API. It's a paid API (HeyGen dropped the free API tier in February 2026), pay-as-you-go with a minimum balance purchase, so check [current pricing](https://developers.heygen.com/docs/pricing) before using it. It's still far cheaper and faster than most alternatives for a short clip, and it saves the manual transcript-timing step below since it returns exact word timing.
+
+```bash
+export HEYGEN_API_KEY="your-api-key-here"
+export HEYGEN_VOICE_ID="a-starfish-compatible-voice-id"
+./generate-speech.sh script.txt audio.mp3 transcript.json
+```
+
+List voices that support the required "starfish" engine:
+
+```bash
+curl -s "https://api.heygen.com/v3/voices?engine=starfish&language=French" \
+  -H "X-Api-Key: $HEYGEN_API_KEY" | jq
+```
+
 ### 2. Re-encode with dense keyframes
 
 The HyperFrames renderer seeks around the source video while capturing frames. A sparse keyframe interval, the default on most generated clips, causes frozen frames under the overlays. Re-encode with a keyframe every frame at your target fps before compositing:
@@ -61,7 +78,7 @@ Edit `public/index.html`:
 - Colors: the `--accent-0` through `--accent-4` custom properties in `:root`
 - Motion: the GSAP calls in the trailing `<script>` block (`kineticChars`, `maskReveal`, `growX`, `slideInBottom`, `fadeIn`)
 
-Use `transcript.example.json` as a reference for the word-level transcript shape (`[{ "text", "start", "end" }, ...]`) if you're timing cards against your own audio. Nothing in the composition parses this file automatically. It's there as a timing reference while you hand-author `data-start` and `data-duration`.
+Use `transcript.example.json` as a reference for the word-level transcript shape (`[{ "text", "start", "end" }, ...]`) if you're timing cards against your own audio. If you used `generate-speech.sh` above, it already wrote this file for you. Nothing in the composition parses this file automatically either way. It's there as a timing reference while you hand-author `data-start` and `data-duration`.
 
 ### 4. Render
 
@@ -75,6 +92,7 @@ npx hyperframes render public -o output.mp4 --fps 25 -q high
 ## Files
 
 - `generate-hedra-video.sh`: calls the Hedra API to produce the avatar clip
+- `generate-speech.sh`: optional, calls HeyGen's text-to-speech API to produce audio and a transcript instead of recording your own voice
 - `public/index.html`: the HyperFrames composition (design system and GSAP timeline)
 - `public/vendor/gsap.min.js`: GSAP (MIT)
 - `public/fonts/`: Inter (OFL)
@@ -92,6 +110,10 @@ Hedra's public HTTP docs were incomplete and inconsistent when this was built, s
 
 If Hedra changes this shape, the script's `jq` calls will simply come back empty and it exits with a clear error instead of failing silently.
 
+## HeyGen API notes
+
+`generate-speech.sh` calls `POST https://api.heygen.com/v3/voices/speech`, documented at [developers.heygen.com/docs/voices/speech](https://developers.heygen.com/docs/voices/speech). It requires a voice that supports the "starfish" engine (see the script for how to list one) and returns `audio_url`, `duration`, and `word_timestamps`. The script filters HeyGen's `<start>`/`<end>` sentinel entries out of the word list and remaps `word` to `text` to match `transcript.example.json`'s shape.
+
 ## Licenses
 
 - GSAP: MIT (see `NOTICE`)
@@ -103,7 +125,7 @@ If Hedra changes this shape, the script's `jq` calls will simply come back empty
 This repo ships only `demo.mp4` (a finished example). No portrait photo, voice recording, or personal transcript. To use it, supply your own:
 
 - A portrait photo (well-lit, facing the camera)
-- A voice recording (MP3/WAV) or a pre-written script if you generate speech elsewhere
+- A voice recording (MP3/WAV), or a text script if you generate speech with `generate-speech.sh` or elsewhere
 - A word-level transcript if you want to time captions precisely (see `transcript.example.json`)
 
 Make sure you have the rights to any voice or likeness you use. Hedra generates a synthetic video of a real person's face and voice.

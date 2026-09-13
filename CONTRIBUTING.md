@@ -25,7 +25,7 @@ Describe what changed and why:
 - No build step or test suite. `npx hyperframes check public` lints the composition, and visual verification happens via screenshot or render.
 - The design system lives in `public/index.html`. All CSS, typography, colors, and component markup are in one file.
 - The GSAP timeline sits in the trailing `<script>` block. Motion timing and easing logic is inline, not in an external file.
-- Hedra API calls go through Bash. `generate-hedra-video.sh` uses `curl` and `jq`. If you modify it, test against Hedra's `/v3/` endpoints (see the script comments for details).
+- API calls go through Bash. `generate-hedra-video.sh` and `generate-speech.sh` use `curl` and `jq`. If you modify either, test against the real API (Hedra's `/v3/` endpoints or HeyGen's `/v3/voices/speech`), see the script comments for details.
 
 ## Questions?
 

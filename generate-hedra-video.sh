@@ -65,17 +65,22 @@ fi
 # Uploaded file URLs are presigned and expire in roughly one hour.
 # The generation call below must happen well within that window.
 
+GEN_BODY=$(jq -n \
+  --arg image_url "$IMAGE_URL" --arg audio_url "$AUDIO_URL" \
+  --arg aspect_ratio "$ASPECT_RATIO" --arg resolution "$RESOLUTION" --arg prompt "$PROMPT" \
+  '{
+    start_image: { source: "url", url: $image_url },
+    audio: { source: "url", url: $audio_url },
+    aspect_ratio: $aspect_ratio,
+    resolution: $resolution,
+    prompt: $prompt
+  }')
+
 echo "== Requesting generation ($MODEL, $RESOLUTION, $ASPECT_RATIO) ==" >&2
 GEN_RESPONSE=$(curl -sS --connect-timeout 10 --max-time 30 -X POST "$API_BASE/models/$MODEL" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $HEDRA_API_KEY" \
-  -d "{
-    \"start_image\": { \"source\": \"url\", \"url\": \"$IMAGE_URL\" },
-    \"audio\": { \"source\": \"url\", \"url\": \"$AUDIO_URL\" },
-    \"aspect_ratio\": \"$ASPECT_RATIO\",
-    \"resolution\": \"$RESOLUTION\",
-    \"prompt\": \"$PROMPT\"
-  }")
+  -d "$GEN_BODY")
 echo "$GEN_RESPONSE" >&2
 
 JOB_ID=$(echo "$GEN_RESPONSE" | jq -r '.job.job_id // .job_id // empty')
