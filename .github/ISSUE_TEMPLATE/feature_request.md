@@ -8,7 +8,7 @@ assignees: ''
 
 ## Is Your Feature Request Related to a Problem?
 
-Describe the problem or limitation — e.g., "It's hard to..." or "There's no way to..."
+Describe the problem or limitation. For example: "It's hard to..." or "There's no way to..."
 
 ## Proposed Solution
 

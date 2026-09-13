@@ -39,7 +39,7 @@
       }
       .video-wrapper video { width: 100%; height: 100%; object-fit: cover; }
 
-      /* Permanent legibility scrim — a soft gradient, not a blurred glass panel. */
+      /* Permanent legibility scrim. A soft gradient, not a blurred glass panel. */
       .scrim {
         position: absolute; left: 0; right: 0; bottom: 0; width: 1080px; height: 720px;
         background: linear-gradient(to top, rgba(2,2,8,0.82) 0%, rgba(2,2,8,0.5) 38%, rgba(2,2,8,0) 100%);
@@ -110,7 +110,7 @@
 
       <div class="scrim clip" id="scrim" data-start="0" data-duration="46.7600" data-track-index="2"></div>
 
-      <!-- card-01 [0.00–7.25] -->
+      <!-- card-01, 0.00 to 7.25 -->
       <div class="card-host clip" id="host-card-01" data-card-id="card-01" data-start="0.0000" data-duration="7.2500" data-track-index="3" style="left:0;top:0;width:1080px;height:1350px;visibility:hidden;opacity:0;">
         <div class="card" data-card-id="card-01">
           <style>
@@ -124,7 +124,7 @@
         </div>
       </div>
 
-      <!-- card-02 [7.25–11.00] -->
+      <!-- card-02, 7.25 to 11.00 -->
       <div class="card-host clip" id="host-card-02" data-card-id="card-02" data-start="7.2500" data-duration="3.7500" data-track-index="3" style="left:0;top:0;width:1080px;height:1350px;visibility:hidden;opacity:0;">
         <div class="card" data-card-id="card-02">
           <style>
@@ -140,7 +140,7 @@
         </div>
       </div>
 
-      <!-- card-03 [11.00–16.00] -->
+      <!-- card-03, 11.00 to 16.00 -->
       <div class="card-host clip" id="host-card-03" data-card-id="card-03" data-start="11.0000" data-duration="5.0000" data-track-index="3" style="left:0;top:0;width:1080px;height:1350px;visibility:hidden;opacity:0;">
         <div class="card" data-card-id="card-03">
           <style>
@@ -157,7 +157,7 @@
         </div>
       </div>
 
-      <!-- card-04 [16.00–24.00] -->
+      <!-- card-04, 16.00 to 24.00 -->
       <div class="card-host clip" id="host-card-04" data-card-id="card-04" data-start="16.0000" data-duration="8.0000" data-track-index="3" style="left:0;top:0;width:1080px;height:1350px;visibility:hidden;opacity:0;">
         <div class="card" data-card-id="card-04">
           <style>
@@ -189,7 +189,7 @@
         </div>
       </div>
 
-      <!-- card-05 [24.00–32.30] -->
+      <!-- card-05, 24.00 to 32.30 -->
       <div class="card-host clip" id="host-card-05" data-card-id="card-05" data-start="24.0000" data-duration="8.3000" data-track-index="3" style="left:0;top:0;width:1080px;height:1350px;visibility:hidden;opacity:0;">
         <div class="card" data-card-id="card-05">
           <style>
@@ -204,7 +204,7 @@
         </div>
       </div>
 
-      <!-- card-06 [32.30–36.00] -->
+      <!-- card-06, 32.30 to 36.00 -->
       <div class="card-host clip" id="host-card-06" data-card-id="card-06" data-start="32.3000" data-duration="3.7000" data-track-index="3" style="left:0;top:0;width:1080px;height:1350px;visibility:hidden;opacity:0;">
         <div class="card" data-card-id="card-06">
           <style>
@@ -218,7 +218,7 @@
         </div>
       </div>
 
-      <!-- card-07 [36.00–44.00] — thesis, biggest emphasis -->
+      <!-- card-07, 36.00 to 44.00. thesis, biggest emphasis -->
       <div class="card-host clip" id="host-card-07" data-card-id="card-07" data-start="36.0000" data-duration="8.0000" data-track-index="3" style="left:0;top:0;width:1080px;height:1350px;visibility:hidden;opacity:0;">
         <div class="card" data-card-id="card-07">
           <style>
@@ -237,7 +237,7 @@
         </div>
       </div>
 
-      <!-- card-08 [44.00–46.76] — close -->
+      <!-- card-08, 44.00 to 46.76. close -->
       <div class="card-host clip" id="host-card-08" data-card-id="card-08" data-start="44.0000" data-duration="2.7600" data-track-index="3" style="left:0;top:0;width:1080px;height:1350px;visibility:hidden;opacity:0;">
         <div class="card" data-card-id="card-08">
           <style>
@@ -282,24 +282,24 @@
             tl.fromTo(sel, { opacity: 0, y: dist }, { opacity: 1, y: 0, duration: dur, ease: "back.out(1.5)" }, at);
           }
 
-          // ── persistent scrim ──
+          // persistent scrim
           tl.fromTo(".scrim", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 0);
 
-          // ── card-01 [0.0 – 7.25] ──
+          // card-01, 0.0 to 7.25
           enter("card-01", 0.0);
           fadeIn("#c1-kicker", 0.15, 0.35);
           kineticChars("#c1-title", 0.35, 0.5, 0.045);
           fadeIn("#c1-detail", 1.05, 0.45);
           exit("card-01", 6.95);
 
-          // ── card-02 [7.25 – 11.0] ──
+          // card-02, 7.25 to 11.0
           enter("card-02", 7.25);
           fadeIn("#c2-kicker", 7.35, 0.3);
           maskReveal("#c2-title", 7.55, 0.5);
           fadeIn("#c2-detail", 8.2, 0.4);
           exit("card-02", 10.75);
 
-          // ── card-03 [11.0 – 16.0] ──
+          // card-03, 11.0 to 16.0
           enter("card-03", 11.0);
           fadeIn("#c3-kicker", 11.1, 0.3);
           kineticChars("#c3-title", 11.3, 0.45, 0.025);
@@ -307,7 +307,7 @@
           fadeIn("#c3-detail", 12.15, 0.4);
           exit("card-03", 15.75);
 
-          // ── card-04 [16.0 – 24.0] ──
+          // card-04, 16.0 to 24.0
           enter("card-04", 16.0);
           fadeIn("#c4-kicker", 16.1, 0.3);
           slideInBottom("#c4-step1", 16.35, 0.4, 34);
@@ -315,20 +315,20 @@
           slideInBottom("#c4-step3", 17.75, 0.4, 34);
           exit("card-04", 23.75);
 
-          // ── card-05 [24.0 – 32.3] ──
+          // card-05, 24.0 to 32.3
           enter("card-05", 24.0);
           fadeIn("#c5-kicker", 24.1, 0.3);
           maskReveal("#c5-title", 24.3, 0.55);
           fadeIn("#c5-detail", 25.1, 0.4);
           exit("card-05", 32.05);
 
-          // ── card-06 [32.3 – 36.0] ──
+          // card-06, 32.3 to 36.0
           enter("card-06", 32.3);
           fadeIn("#c6-kicker", 32.4, 0.3);
           maskReveal("#c6-title", 32.6, 0.5);
           exit("card-06", 35.75);
 
-          // ── card-07 [36.0 – 44.0] — thesis, biggest emphasis ──
+          // card-07, 36.0 to 44.0. thesis, biggest emphasis
           enter("card-07", 36.0);
           fadeIn("#c7-kicker", 36.1, 0.3);
           maskReveal("#c7-title", 36.3, 0.5);
@@ -336,7 +336,7 @@
           fadeIn("#c7-detail", 37.15, 0.45);
           exit("card-07", 43.75);
 
-          // ── card-08 [44.0 – 46.76] — CTA / close ──
+          // card-08, 44.0 to 46.76. cta, close
           enter("card-08", 44.0);
           fadeIn("#c8-kicker", 44.1, 0.3);
           kineticChars("#c8-title", 44.3, 0.45, 0.02);

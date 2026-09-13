@@ -3,12 +3,12 @@
 # talking-head video with the Character-3 model, waits for it to finish, and
 # downloads the result.
 #
-# Verified against Hedra's v3 API directly (not from public docs, which are
-# sparse/inconsistent at the time of writing): file upload returns a
-# presigned `url` (not an id), the generation endpoint is a POST to
-# /v3/models/<model>, and job status is polled at /v3/jobs/<job_id>/status.
-# If Hedra changes their API shape, `jq` errors here will point at exactly
-# which field went missing.
+# Verified against Hedra's v3 API directly, not from public docs (sparse and
+# inconsistent at the time of writing). File upload returns a presigned
+# `url`, not an id. The generation endpoint is a POST to /v3/models/<model>.
+# Job status is polled at /v3/jobs/<job_id>/status. If Hedra changes their
+# API shape, the `jq` errors here will point at exactly which field went
+# missing.
 set -euo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -62,8 +62,8 @@ if [ -z "$AUDIO_URL" ] || [ "$AUDIO_URL" = "null" ]; then
   exit 1
 fi
 
-# Uploaded file URLs are presigned and expire in roughly one hour — the
-# generation call below must happen well within that window.
+# Uploaded file URLs are presigned and expire in roughly one hour.
+# The generation call below must happen well within that window.
 
 echo "== Requesting generation ($MODEL, $RESOLUTION, $ASPECT_RATIO) ==" >&2
 GEN_RESPONSE=$(curl -sS --connect-timeout 10 --max-time 30 -X POST "$API_BASE/models/$MODEL" \

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# AI Talking Head Pipeline — First-time setup
+# AI Talking Head Pipeline: first-time setup.
 # Usage: ./setup.sh
 
 set -euo pipefail
@@ -30,20 +30,20 @@ for tool in curl jq ffmpeg node; do
   fi
 done
 
-echo "✓ curl, jq, ffmpeg, and Node.js found"
+echo "curl, jq, ffmpeg, and Node.js found."
 echo ""
 
 # Create .env if it doesn't exist
 if [ ! -f .env ]; then
   cp .env.example .env
   echo "Created .env from .env.example"
-  echo "⚠️  Edit .env and add your HEDRA_API_KEY before running generate-hedra-video.sh"
+  echo "Edit .env and add your HEDRA_API_KEY before running generate-hedra-video.sh"
   echo ""
 fi
 
 # Make the generation script executable
 chmod +x generate-hedra-video.sh
-echo "✓ generate-hedra-video.sh is executable"
+echo "generate-hedra-video.sh is executable."
 echo ""
 
 echo "=== Setup complete! ==="

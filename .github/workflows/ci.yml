@@ -18,10 +18,10 @@ jobs:
           node-version: "lts/*"
 
       # public/input-video.mp4 is never committed (it's the user's own
-      # generated/personal footage) — synthesize a throwaway placeholder
-      # clip matching the composition's duration purely so the lint step
-      # below can check the timeline, GSAP calls, and card markup without
-      # needing real media.
+      # generated/personal footage). This synthesizes a throwaway
+      # placeholder clip matching the composition's duration, purely so
+      # the lint step below can check the timeline, GSAP calls, and card
+      # markup without needing real media.
       - name: Install ffmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
